@@ -1,0 +1,6 @@
+const String MAP_SDK_KEY = "449c31a55cf14f2306880d42c0dfa925";
+const String REST_API_KEY = "449c31a55cf14f2306880d42c0dfa925";
+const String ATLAS_CLIENT_ID =
+    "96dHZVzsAuvmeAktkRi_2BfCuiEB7PJVvkZbcQWXzgV7OcAUY7ifZTPi6NZ7ySpA1Cr_l39MrjX7MBD1StMARQ==";
+const String ATLAS_CLIENT_SECRET =
+    "lrFxI-iSEg9jSvIqmO6iNyPmxF99GIY_dj2j_6qJpvibNVzvvbZrbX9wjgbTnQfG2a_NCVuSS7ZXzSzYVC2DGJAqUiHqnNez";
