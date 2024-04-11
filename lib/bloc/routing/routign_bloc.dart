@@ -46,15 +46,23 @@ pointsSelected(PointsSelectedEvent event, Emitter<RoutingState> emit,
       .callDirection();
   print(directionResponse!.routes![0].geometry);
   List<DirectionsRoute> routes = directionResponse.routes!;
-  
-  List<List<num>> points = decodePolyline(routes[0].geometry!);
+  // List<List<String>> polylines = [];
+  // for (var route in routes) {
+  //   polylines.add(route.geometry as List<String>);
+  // }
+  List<List<num>> points =
+      decodePolyline(routes[0].geometry!, accuracyExponent: 6);
   List<LatLng> latLngs = [];
   for (var i in points) {
     latLngs.add(LatLng(i[0].toDouble(), i[1].toDouble()));
   }
   print(latLngs.length);
 
-  for(var point in latLngs){
-    
+  for (var point in latLngs) {
+    print(point.latitude);
+    print(point.longitude);
   }
+
+  Line line = await mapController.addLine(
+      LineOptions(geometry: latLngs, lineColor: "#000000", lineWidth: 2));
 }
